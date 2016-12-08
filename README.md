@@ -6,3 +6,6 @@
  * Find Rotation and Translation matrix from the decomposition of the Essential Matrix.
  * Find 3D point cloud using the Linear Triangulation method.
  * Display the 3D points in the world frame using (PCL) Point Cloud Library and VTK. 
+
+Youtube link:
+https://www.youtube.com/watch?v=YmOfUyeRtk8&t=1s
