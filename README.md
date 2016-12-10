@@ -14,7 +14,8 @@ https://www.youtube.com/watch?v=YmOfUyeRtk8&t=1s
 ./build.sh
 
 ## Run
-./StructureFrom
+./StructureFromMotion
+
 (Give the number of corresponding points: 100)
 
 ## Visualize Point Cloud using PCL
