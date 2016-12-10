@@ -9,3 +9,13 @@
 
 Youtube link:
 https://www.youtube.com/watch?v=YmOfUyeRtk8&t=1s
+
+## Build
+./build.sh
+
+## Run
+./StructureFrom
+(Give the number of corresponding points: 100)
+
+## Visualize Point Cloud using PCL
+pcl_viewer eg.pcd
