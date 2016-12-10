@@ -366,8 +366,6 @@ int main(int argc, char** argv){
 		printf("Fundamental matrix was not found\n");
 	}
     
-    
-    
     CvMat *K = (CvMat*)cvLoad( "Intrinsics.xml" );
     
     cout << "K\n "<< endl << Mat(K) << endl;
@@ -388,15 +386,12 @@ int main(int argc, char** argv){
 	printf("\n\n");
 	cout << "\nE = K.t()*F*K\n "<< endl << Mat(E) << endl;
     
-    
     Mat_<double> EE = Mat(E);
-    
     
     cout << "\nDeterminant of EE: " << determinant(EE) << "\n";
     
-    
-    
-    if (determinant(EE)<0) {
+    if (determinant(EE) < 0) 
+    {
         cout << "\nDeterminant of EE: " << determinant(EE) << "\n";
         cout << "before -EE " << endl << EE << endl;
         EE = -EE;
@@ -406,7 +401,7 @@ int main(int argc, char** argv){
     }
     
     
-    if (determinant(E) > 0.000001)
+    if (determinant(Mat_<double>(E)) > 0.0001)
     {
         cout << "Essential Matrix constraint does not apply" << endl;
         return 0;
@@ -414,10 +409,10 @@ int main(int argc, char** argv){
     }
     
     CvMat *invK = cvCreateMat(3,3,CV_32FC1);
-     cvInvert (K, invK, CV_LU);
-     CvMat *invKT = cvCreateMat(3,3,CV_32FC1);
-     cvTranspose(invK,invKT);
-     printf("lala\n");
+    cvInvert (K, invK, CV_LU);
+    CvMat *invKT = cvCreateMat(3,3,CV_32FC1);
+    cvTranspose(invK,invKT);
+    printf("lala\n");
     
     //Essential matrix: compute then extract cameras [R|t]
     //----------------------------------------------------
